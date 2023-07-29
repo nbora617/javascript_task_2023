@@ -1,0 +1,76 @@
+body {
+    width:1000px; margin:0 auto;
+    display:flex; flex-flow:column nowrap; text-align:center;
+}
+h1 {
+    font-family: 'PartialSansKR-Regular'; font-size:2.5rem; color:#fff;
+    background:#000; padding:20px; margin-bottom:20px;
+}
+h2 {
+    font-family: 'KBO-Dia-Gothic_bold';
+    font-size:2rem; font-weight:700; line-height:50px;
+    margin-bottom:20px;
+}
+h2 em {
+    font-family: 'KBO-Dia-Gothic_bold';
+    font-size:2.2rem; font-weight:700; line-height:35px;
+    color:rgb(196, 55, 243);
+}
+.desc {
+    font-family: 'KBO-Dia-Gothic_bold'; font-size:1.4rem; color:rgb(196, 55, 243); 
+    margin-bottom:20px;
+}
+#dietFrm {}
+#dietFrm fieldset {
+    border:5px solid #000; border-radius:10px;
+    margin:20px 200px;  padding:30px 20px;
+}
+#dietFrm fieldset h3 {
+    font-size:1.25rem; font-weight:500; font-weight:700;
+    margin-bottom:10px;
+}
+/* #dietFrm fieldset .gender {
+    display:flex; flex-flow:row nowrap; 
+    margin-bottom:20px;
+}
+#dietFrm fieldset .gender li {}
+#dietFrm fieldset .gender li label {}
+#dietFrm fieldset .gender li label input {
+    appearance:none;
+}
+#dietFrm fieldset .gender li label #male {}
+#dietFrm fieldset .gender li label #female {margin-left:20px;}
+#dietFrm fieldset .gender li label span {
+    background:url(../images/unchecked.png) no-repeat;
+} */
+#dietFrm fieldset .body_info {margin-bottom:40px;}
+#dietFrm fieldset .body_info input {
+    margin-top:20px; padding:10px 0;
+}
+#dietFrm fieldset .body_info input {font-size:1.25rem;}
+#dietFrm fieldset .body_info span {font-size:1.25rem; font-weight:700;}
+#dietFrm fieldset .body_info input:active {
+    border:1px solid #000;
+} 
+#dietFrm fieldset .body_info #height {}
+#dietFrm fieldset .body_info #weight {}
+#dietFrm fieldset #submitBtn {
+    background:black; 
+    color:#fff; font-size:1.625rem; width:300px;
+    padding:10px 20px;
+}
+.result {
+    background:#000; margin:20px 200px 0 200px; padding:20px 0;
+}
+.result p {color:#fff; font-size:1.625rem; margin-bottom:15px;}
+.result p span {
+    color:rgb(196, 55, 243); padding-bottom:5px;
+    width:100px; border-bottom:1px solid #fff; display:inline-block;
+    font-family: 'KBO-Dia-Gothic_bold'; font-size:1.625rem;
+}
+.result p .normal_W {}
+.result p .over_W {}
+.result .btn #resetBtn {
+    margin-top:10px; padding:10px 20px; border:1px solid #fff;
+    background:none; color:#fff;
+}

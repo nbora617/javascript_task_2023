@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>표준체중 계산기</title>
+    <!-- 글꼴 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/scale.css">
+</head>
+<body>
+    <h1>DIET</h1>
+    <h2>나의 <em>적정체중</em>은?!<br>적정체중 알아보고 건강하게 관리하자!</h2>
+    <p class="desc">계산법은 (본인신장(cm) - 100) *0.9 입니다.</p>
+    <form action="#" method="get" id="dietFrm">
+        <fieldset>
+            <legend class="skip">적정체중 계산기</legend>
+            <!-- <h3>성별정보</h3>
+            <ul class="gender">
+                <li>
+                    <label for="male">
+                        <input type="radio" id="male" name="gender" checked><span>남성</span>
+                    </label>
+                </li>
+                <li>
+                    <label for="female">
+                        <input type="radio" id="female" name="gender"><span>여성</span>
+                    </label>
+                </li>
+            </ul> -->
+            <h3>신체정보</h3>
+            <ul class="body_info">
+                <li><input type="text" id="height" placeholder="키를 입력하세요"> <span>cm</span></li>
+                <li><input type="text" id="weight" placeholder="몸무게를 입력하세요"> <span>kg</span></li>    
+            </ul>
+            <button type="submit" id="submitBtn">계산하기</button>
+        </fieldset>
+    </form>
+    <div class="result">
+        <p>적정체중은 <span class="normal_W"><!-- 스크립트==적정체중 계산값 --></span> 이며</p>
+        <p><span class="over_W"></span> 초과입니다.</p>
+        <div class="btn"><button type="button" id="resetBtn">초기화</button></div>
+    </div>
+    <script src="./scripts/scale..js"></script>
+</body>
+</html>

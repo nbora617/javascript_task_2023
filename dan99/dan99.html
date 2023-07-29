@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>구구단을 외자!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/dan99.css">
+</head>
+<body>
+    <div class="box">
+        <h1>구구단 퀴즈</h1>
+        <h2>2단 마스터히기</h2>
+        <h3>**빈칸에 숫자를 입력해주세요.**</h3>
+        <form action="#" method="get" id="quiz">
+            <fieldset>
+                <legend class="skip">quiz</legend>
+                <span>2</span>
+                <span>X</span>
+                <input type="text" class="blank" autofocus>
+                <span>=</span>
+                <span class="result">?</span>
+            </fieldset>
+        </form>
+        <button type="button" id="btn">정답보기</button>
+    </div>
+    <script>
+        //변수생성
+        const btn = document.querySelector('#btn')
+        const num = document.querySelector('#quiz .blank')
+        const result = document.querySelector('#quiz .result')
+        //이벤트 실행
+        btn.addEventListener('click',function(){
+            result.innerHTML = `${2*num.value}`
+        })
+    </script>
+</body>
+</html>
