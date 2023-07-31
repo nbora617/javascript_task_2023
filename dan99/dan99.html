@@ -13,30 +13,38 @@
     <link rel="stylesheet" href="./styles/dan99.css">
 </head>
 <body>
-    <div class="box">
-        <h1>구구단 퀴즈</h1>
-        <h2>2단 마스터히기</h2>
-        <h3>**빈칸에 숫자를 입력해주세요.**</h3>
-        <form action="#" method="get" id="quiz">
-            <fieldset>
-                <legend class="skip">quiz</legend>
-                <span>2</span>
-                <span>X</span>
-                <input type="text" class="blank" autofocus>
-                <span>=</span>
-                <span class="result">?</span>
-            </fieldset>
-        </form>
-        <button type="button" id="btn">정답보기</button>
+    <div class="bg">
+        <div class="box">
+            <h1><span>구구단</span>을 외자</h1>
+            <h2>2단 마스터하기</h2>
+            <h3>**빈칸에 숫자를 입력해주세요.**</h3>
+            <form action="#" method="get" id="quiz">
+                <fieldset>
+                    <legend class="skip">quiz</legend>
+                    <span>2</span>
+                    <span>X</span>
+                    <input type="text" class="blank" autofocus>
+                    <span>=</span>
+                    <span class="result">?</span>
+                </fieldset>
+                <button type="'button" id="resetBtn">다시 입력하기</button>
+            </form>
+            <button type="button" id="submitBtn">정답보기</button>
+        </div>
     </div>
     <script>
         //변수생성
-        const btn = document.querySelector('#btn')
+        const submitbtn = document.querySelector('#submitBtn')
+        const resetbtn = document.querySelector('#resetBtn')
         const num = document.querySelector('#quiz .blank')
         const result = document.querySelector('#quiz .result')
         //이벤트 실행
-        btn.addEventListener('click',function(){
+        submitbtn.addEventListener('click',function(){
             result.innerHTML = `${2*num.value}`
+        })
+        resetbtn.addEventListener('click',function(){
+            num.value = null
+            result.innerHTML = '?'
         })
     </script>
 </body>

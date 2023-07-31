@@ -1,10 +1,27 @@
+.bg {
+    background:url(../images/bg.jpg) center;
+    background-size:cover;
+}
 .box {
-    width:800px; background:yellowgreen;
+    width:1200px; /* background:yellowgreen; */
     margin:0 auto; padding:50px 0; text-align:center;
 }
 .box h1 {
-    font-family: 'KBO-Dia-Gothic_bold'; font-size:2rem;
-    margin-bottom:10px;
+    font-family: 'KBO-Dia-Gothic_bold'; font-size:4rem;
+    background:linear-gradient(yellow, yellowgreen);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin-bottom:30px;
+}
+.box h1 span {
+    color:greenyellow;
+    font-family: 'KBO-Dia-Gothic_bold'; font-size:4rem;
+    background:linear-gradient(-45deg, yellowgreen, yellow, yellowgreen);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    background-size:300%; 
+    display:inline-block;
+    animation:effect 1s alternate infinite;
 }
 .box h2 {
     font-family: 'KBO-Dia-Gothic_bold'; font-size:1.25rem;
@@ -14,7 +31,7 @@
 .box #quiz {}
 .box #quiz fieldset {
     background:white; margin:0 200px; padding:10px 0;
-    border:10px solid green; border-radius:15px;
+    border:5px solid green; border-radius:15px;
     margin-bottom:20px;
 }
 .box #quiz fieldset span {
@@ -22,14 +39,27 @@
     font-size:1.635rem;
     margin-right:20px;
 }
+.box #quiz fieldset span:last-child {animation:effect 1s alternate infinite;}
 .box #quiz fieldset .blank {
     display:inline-block; 
     width:50px; border-bottom:5px solid black;
     padding:0 15px;
     font-family: 'KBO-Dia-Gothic_bold'; font-size:1.635rem;
 }
-.box #btn {
+.box #quiz #resetBtn {
+    padding:5px 20px; font-weight:700;
+    background:none; margin-bottom:50px;
+} 
+.box #submitBtn {
     padding:10px 50px; font-family: 'KBO-Dia-Gothic_bold'; font-size:1.25rem;
     /* background:#000; color:#fff; */
 }
-
+/* 애니메이션 */
+@keyframes gra {
+    0% {background-position-X:0%}
+    100% {background-position-X:200%}
+} 
+@keyframes effect {
+    0% {transform:translateY(-5px) skew(-5deg)}
+    100% {transform:translateY(5px) skew(5deg)}
+}
